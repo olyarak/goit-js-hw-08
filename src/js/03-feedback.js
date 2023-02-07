@@ -10,7 +10,7 @@ formEl.addEventListener('submit', onSubmit);
 onRefreshPage(currentFormData);
 
 function onChangeData(event) {
-  formData[event.target.name] = event.target.value;
+  formData[event.target.name] = event.target.value.trim();
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
 }
 
